@@ -1,11 +1,10 @@
 import React from 'react'
 import { View } from 'react-native'
+import QuoteScreen from './src/screens/QuoteScreen'
 
 const App = () => {
   return (
-    <View>
-      
-    </View>
+    <QuoteScreen />
   )
 }
 
