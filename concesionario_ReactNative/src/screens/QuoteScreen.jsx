@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, SafeAreaView, ScrollView,Pressable } from 'react-native'
 import { Text, TextInput, Button, RadioButton, List, Modal } from 'react-native-paper';
-import styles from '../styles/globalStylesQuotes';
+import styles from '../styles/globalStyles'
 
 
 const QuoteScreen = () => {
@@ -15,7 +15,7 @@ const QuoteScreen = () => {
       <SafeAreaView style={styles.containerMain}>
           <ScrollView>
               <View style={styles.header}>
-                  <Text style={styles.texto} variant="displayMedium">Cotizacion Vehiculo</Text>
+                  <Text style={styles.headerText} variant="displayMedium">Cotizacion Vehiculo</Text>
               </View>
 
               <View style={styles.contenedor}>

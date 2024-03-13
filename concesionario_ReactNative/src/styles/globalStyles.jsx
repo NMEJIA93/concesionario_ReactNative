@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     title: {
@@ -51,14 +51,17 @@ const styles = StyleSheet.create({
 
     },
     header: {
-        backgroundColor: '#3B82F6',
-        paddingVertical: 10,
-        borderRadius: 10,
-        alignContent: 'center',
-        margin: 10
+
+        fontSize: 30,
+        textAlign: 'center',
+        color: '#D5D5D5',
+        backgroundColor: '#000000',
+        padding: 10,
+        fontFamily: 'sans-regular',
+
 
     },
-    texto: {
+    headerText: {
         textAlign: 'center',
         fontSize: 30,
         color: '#FFF',
@@ -69,7 +72,7 @@ const styles = StyleSheet.create({
     containerMain: {
         backgroundColor: "#494ce7",
         flex: 1
-    }, 
+    },
     btnCancelar: {
         marginVertical: 10,
         backgroundColor: '#5827A4',
@@ -79,25 +82,33 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#FFF'
     },
-    btnTexto: {
+    btnText: {
         color: '#FFF',
         textAlign: 'center',
-        fontSize: 16,
         fontWeight: '900',
         textTransform: 'uppercase'
     },
-    btnPrimary: {
-        marginVertical: 10,
-        backgroundColor: '#36a427',
-        marginHorizontal: 20,
-        padding: 10,
-        borderRadius: 10,
-        borderWidth: 1,
-        borderColor: '#FFF'
+    contenedorOpc: {
+        flexDirection: 'row',
+
     },
-    contenedorOpc:{
-        flexDirection:'row',
-        
+
+    btnPrimary: {
+        marginVertical: 25,
+        backgroundColor: '#1E2737',
+        paddingVertical: 15,
+        marginHorizontal: 30,
+        borderRadius: 5,
+        height: 100,
+        width: 300,
+        alignContent: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    bodyTecnicalServiceScreen: {
+        alignContent: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
     }
 })
 
