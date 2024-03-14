@@ -4,14 +4,16 @@ import { Text, TextInput, Button, RadioButton, List, Modal } from 'react-native-
 
 import styles from '../styles/globalStyles'
 import ServiceHistory from '../components/ServiceHistory';
+import TechnicalServiceFormScreen from './TechnicalServiceFormScreen';
 
 const TechnicalServiceScreen = () => {
     const [modalServiceHistory, setModalServiceHistory] = useState(false)
+    const [modalTechnicalServiceForm, setModalTechnicalServiceForm] = useState(false)
 
     return (
         //<SafeAreaView>
         //   <ScrollView>
-        <View style={{flex:1}}>
+        <View style={{ flex: 1 }}>
             <View style={styles.header}>
                 <Text
                     style={styles.headerText}
@@ -19,13 +21,16 @@ const TechnicalServiceScreen = () => {
                     Servicio Tecnico
                 </Text>
             </View>
+
             <View style={styles.bodyTecnicalServiceScreen}>
+
                 <Pressable
                     style={styles.btnPrimary}
                 >
                     <Text
                         style={styles.btnText}
                         variant="headlineSmall"
+                        onPress={() => { setModalTechnicalServiceForm(!modalTechnicalServiceForm) }}
                     >
                         Solicitud Taller
                     </Text>
@@ -64,6 +69,13 @@ const TechnicalServiceScreen = () => {
                 <ServiceHistory
                     modalServiceHistory={modalServiceHistory}
                     setModalServiceHistory={setModalServiceHistory}
+                />
+            )}
+
+            {modalTechnicalServiceForm && (
+                <TechnicalServiceFormScreen
+                    modalTechnicalServiceForm={modalTechnicalServiceForm}
+                    setModalTechnicalServiceForm={setModalTechnicalServiceForm}
                 />
             )}
         </View>

@@ -1,9 +1,9 @@
 import React from 'react'
 import ServicesList from './ServicesList'
-import { StyleSheet, Text, View, SafeAreaView, ScrollView,Pressable } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, ScrollView, Pressable, Modal } from 'react-native'
 
 import styles from '../styles/globalStyles'
-import { Modal } from 'react-native-paper'
+/* import { Modal } from 'react-native-paper' */
 
 const ServiceHistory = ({ modalServiceHistory, setModalServiceHistory }) => {
     const services = [
@@ -11,7 +11,7 @@ const ServiceHistory = ({ modalServiceHistory, setModalServiceHistory }) => {
             id: 1,
             tipo: 'Mantenimiento',
             fecha: 'hoy ',
-        },
+        }/* ,
         {
             id: 2,
             tipo: 'Reparacion',
@@ -36,7 +36,7 @@ const ServiceHistory = ({ modalServiceHistory, setModalServiceHistory }) => {
             id: 7,
             tipo: 'Revision Tecnica',
             fecha: 'ayer ',
-        }
+        } */
     ]
 
     return (
@@ -46,29 +46,31 @@ const ServiceHistory = ({ modalServiceHistory, setModalServiceHistory }) => {
         >
 
 
-            <SafeAreaView >
+            <SafeAreaView style={{ flex: 1 }}>
                 <ScrollView>
                     <View >
                         <View style={styles.header}>
                             <Text style={styles.headerText}>Historial de Servicios</Text>
                         </View>
 
+
                         <ServicesList
                             services={services}
                         />
 
-
-                    </View>
-                    <Pressable
-                    >
-                        <Text
-                            style={styles.btnText}
-                            variant="headlineMedium"
-                            onPress={() => { setModalServiceHistory(!modalServiceHistory) }}
+                        <Pressable
+                            style={styles.btnPrimary}
                         >
-                            Regresar
-                        </Text>
-                    </Pressable>
+                            <Text
+                                style={styles.btnText}
+                                variant="headlineMedium"
+                                onPress={() => { setModalServiceHistory(!modalServiceHistory) }}
+                            >
+                                Regresar
+                            </Text>
+                        </Pressable>
+                    </View>
+
                 </ScrollView>
             </SafeAreaView>
 
