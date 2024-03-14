@@ -1,20 +1,18 @@
 import React from 'react'
-import { View, SafeAreaView, ScrollView } from 'react-native'
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import Navigation from './src/navigation/Navigation'
 
-import QuoteScreen from './src/screens/QuoteScreen'
-import TechnicalServiceScreen from './src/screens/TechnicalServiceScreen'
-import ServiceHistory from './src/components/ServiceHistory'
+
+
 
 const App = () => {
   return (
 
+    <Navigation/>
 
 
-
-    <SafeAreaProvider>
+   /* <SafeAreaProvider>
       <TechnicalServiceScreen />
-    </SafeAreaProvider>
+    </SafeAreaProvider>*/
 
 
     //<QuoteScreen/>
