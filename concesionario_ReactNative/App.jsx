@@ -1,5 +1,9 @@
 import React from 'react'
+
 import Navigation from './src/navigation/Navigation'
+import { View, } from 'react-native'
+import TechnicalServiceScreen from './src/screens/TechnicalServiceScreen'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 
 
@@ -7,12 +11,12 @@ import Navigation from './src/navigation/Navigation'
 const App = () => {
   return (
 
-    <Navigation/>
+    /*     <Navigation/> */
+  
 
-
-   /* <SafeAreaProvider>
-      <TechnicalServiceScreen />
-    </SafeAreaProvider>*/
+    <SafeAreaProvider>
+      <TechnicalServiceScreen/>
+    </SafeAreaProvider>
 
 
     //<QuoteScreen/>
