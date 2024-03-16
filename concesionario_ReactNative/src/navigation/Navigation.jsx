@@ -25,6 +25,13 @@ const Navigation = () => {
         } else if (route.name === 'catalogue') {
           iconName = 'web-check';
         }
+        else if (route.name === 'technicalServiceScreen') {
+          iconName = 'web-check';
+        }else if (route.name === 'quoteScreen') {
+          iconName = 'web-check';
+        }else if (route.name === 'technicalServiceFormScreen') {
+          iconName = 'web-check';
+        }
         console.log('Icon name:', iconName);
         return <Icon name={iconName} size={size} color={color} />;
       }
