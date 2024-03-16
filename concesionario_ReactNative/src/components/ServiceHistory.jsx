@@ -11,7 +11,7 @@ const ServiceHistory = ({ modalServiceHistory, setModalServiceHistory }) => {
             id: 1,
             tipo: 'Mantenimiento',
             fecha: 'hoy ',
-        }/* ,
+        } ,
         {
             id: 2,
             tipo: 'Reparacion',
@@ -36,7 +36,7 @@ const ServiceHistory = ({ modalServiceHistory, setModalServiceHistory }) => {
             id: 7,
             tipo: 'Revision Tecnica',
             fecha: 'ayer ',
-        } */
+        } 
     ]
 
     return (
@@ -59,7 +59,7 @@ const ServiceHistory = ({ modalServiceHistory, setModalServiceHistory }) => {
                         />
 
                         <Pressable
-                            style={styles.btnPrimary}
+                            style={styles.btnCancel}
                         >
                             <Text
                                 style={styles.btnText}
@@ -81,28 +81,4 @@ const ServiceHistory = ({ modalServiceHistory, setModalServiceHistory }) => {
 
     )
 }
-
-/* const styles = StyleSheet.create({
-    header: {
-        backgroundColor: '#2703f5',
-        paddingVertical: 10,
-        borderRadius: 10,
-        alignContent: 'center',
-        margin: 10
-
-    },
-    texto: {
-        textAlign: 'center',
-        fontSize: 30,
-        color: '#FFF',
-        textTransform: 'uppercase',
-        fontWeight: 'bold',
-
-    },
-    containerServiceHistory:{
-        backgroundColor:  '#5881f3',
-        flex: 1
-    }
-}) */
-
 export default ServiceHistory
