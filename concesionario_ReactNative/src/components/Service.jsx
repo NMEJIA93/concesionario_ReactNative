@@ -1,10 +1,11 @@
 import React from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
+import styles from '../styles/globalStyles'
 
 const Service = ({ id , tipo, fecha }) => {
 
     return (
-        <View style={styles.contenedor}>
+        <View style={styles.container}>
             <View style={styles.containerDatos}>
                 <Text style={styles.label}>ID: </Text>
                 <Text style={styles.value}>{id} </Text>
@@ -25,7 +26,9 @@ const Service = ({ id , tipo, fecha }) => {
     )
 }
 
-const styles = StyleSheet.create({
+
+
+/* const styles = StyleSheet.create({
     contenedor: {
         backgroundColor: '#fff',
         padding: 20,
@@ -55,5 +58,5 @@ const styles = StyleSheet.create({
         marginBottom: 10
     }
 })
-
+ */
 export default Service
