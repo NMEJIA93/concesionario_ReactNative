@@ -1,11 +1,10 @@
 import React from 'react'
 import { View } from 'react-native'
+import Contact from './src/components/Contact'
 
 const App = () => {
   return (
-    <View>
-      
-    </View>
+<Contact/>
   )
 }
 
