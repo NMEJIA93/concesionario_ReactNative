@@ -4,6 +4,10 @@ import Vehicle from './Vehicle';
 
 
 const VehicleList = ({ vehicles }) => {
+  const handleCotizar = () => {
+    // Lógica para manejar la acción de cotizar
+    console.log('Botón Cotizar presionado');
+  };
   return (
 
       <ScrollView>
@@ -11,8 +15,10 @@ const VehicleList = ({ vehicles }) => {
           <Vehicle
           key={vehicle.id}
           urlImagen={vehicle.urlImagen}
+          name={vehicle.name}
           description={vehicle.description}
           price={vehicle.price}
+          onCotizar={handleCotizar} // Pasar la función de manejo como prop
           />
         ))}
       </ScrollView>

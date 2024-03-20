@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { StyleSheet} from 'react-native'
+import { IconButton, Colors } from 'react-native-paper';
 
 import Start from '../screens/Start'
 import Catalogue from '../screens/Catalogue'
@@ -18,12 +18,12 @@ const Navigation = () => {
         tabBarStyle: {
         display: 'flex',
       },
-      tabBarIcon: ({ color,size }) => {
+      tabBarIcon: ({ color, size }) => {
         let iconName
         if (route.name === 'start') {
-          iconName = 'bus';
+          iconName = "camera";
         } else if (route.name === 'catalogue') {
-          iconName = 'web-check';
+          iconName = 'camera';
         }
         else if (route.name === 'technicalServiceScreen') {
           iconName = 'web-check';
@@ -33,7 +33,7 @@ const Navigation = () => {
           iconName = 'web-check';
         }
         console.log('Icon name:', iconName);
-        return <Icon name={iconName} size={size} color={color} />;
+        return <IconButton source={iconName} size={size} color={color} />;
       }
       })
   return (
