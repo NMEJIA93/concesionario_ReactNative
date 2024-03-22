@@ -3,6 +3,7 @@ import { ScrollView } from 'react-native';
 import Vehicle from './Vehicle';
 
 
+
 const VehicleList = ({ vehicles }) => {
   const handleCotizar = () => {
     // Lógica para manejar la acción de cotizar

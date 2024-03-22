@@ -48,21 +48,6 @@ const TechnicalServiceScreen = () => {
                         Historial Servicios
                     </Text>
                 </Pressable>
-
-
-
-                <Pressable
-                    style={styles.btnPrimary}
-                >
-                    <Text
-                        style={styles.btnText}
-                        variant="headlineMedium"
-                    >
-                        Home
-                    </Text>
-                </Pressable>
-
-
             </View>
 
             {modalServiceHistory && (
