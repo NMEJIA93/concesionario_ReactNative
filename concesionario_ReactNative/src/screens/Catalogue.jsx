@@ -2,51 +2,40 @@ import React, { useState } from 'react';
 import { Text, View, StyleSheet} from 'react-native'
 import { Picker } from '@react-native-picker/picker';
 import VehicleList from '../components/VehicleList'
+import { Button } from 'react-native-paper';
 
 const Catalogue = () => {
     const [selectedValue, setSelectedValue] = useState('');
+    const [selectedValueM, setSelectedValueM] = useState('');
     
     const vehicles = [
         {
             id: 1,
-            urlImagen: 'https://loscoches.com/wp-content/uploads/2022/06/1-Jeep-Commander-Los-Coches.jpg',
-            description: 'Camila debes estudiar',
-            price: 2000
+            urlImagen: 'https://www.ford.com.co/content/dam/Ford/website-assets/latam/co/nameplate/raptor/2023/colorizer/negro-agata/fco-f150-raptor-colorizer-negro-agata.jpg.dam.full.high.jpg/1684866214905.jpg',
+            name:'Ford F-150® Raptor',
+            description: 'Asistente Anti-Colisión con detector de peatones, Sistema de Permanencia en el carril',
+            price: 'Desde $520.990.000',
+            
 
         },
         {
             id: 2,
-            urlImagen: 'https://loscoches.com/wp-content/uploads/2022/06/1-Jeep-Commander-Los-Coches.jpg',
-            description: 'JEEP2',
-            price: 2000
+            urlImagen: 'https://www.jeep.com/content/dam/cross-regional/stellantis/jeep/latam-rol/colombia/modelos/2023/wrangler/minis/Wrangler-2-puertas%20-%20FJDR%20FJDR.png.img.1440.png',
+            name:'Rubicon',
+            description: 'Sistema 4X4 Rock-Trac Full Time con bajo + Desconexión electrónica de la barra estabilizadora + ejes dana de alta resistencia.',
+            price: 'Desde $364.990.000'
 
         },
-        ,
         {
             id: 3,
-            urlImagen: 'https://loscoches.com/wp-content/uploads/2022/06/1-Jeep-Commander-Los-Coches.jpg',
-            description: 'JEEP2',
-            price: 2000
-
-        },
-        ,
-        {
-            id: 4,
-            urlImagen: 'https://loscoches.com/wp-content/uploads/2022/06/1-Jeep-Commander-Los-Coches.jpg',
-            description: 'JEEP2',
-            price: 2000
-
-        },
-        ,
-        {
-            id: 5,
-            urlImagen: 'https://loscoches.com/wp-content/uploads/2022/06/1-Jeep-Commander-Los-Coches.jpg',
-            description: 'JEEP2',
-            price: 2000
+            urlImagen: 'https://www.jeep.com/content/dam/cross-regional/stellantis/jeep/latam-rol/chile/modelos/2023/new-renegade/Renegade_sport.png.img.1440.png',
+            name:'SPORT 1.3 ',
+            description: 'Motor 1.3L T270 turbo con Torque 270 Nm, Control de tracción con bloqueo electrónico de diferencial',
+            price: 'Desde $ $364.990.000'
 
         }];
   return (
-    <View>
+    <View >
     <Text style={styles.banner}>Catálogo de Vehículos</Text>  
     <View >
       <Text style={styles.descrip}>Seleccionar Marca</Text>
@@ -54,19 +43,19 @@ const Catalogue = () => {
       style={styles.catalogueContainer}
       selectedValue={selectedValue} 
       onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
-      <Picker.Item label="Mazda" value="Mazda" />
-      <Picker.Item label="Opción 2" value="opcion2" />
-      <Picker.Item label="Opción 3" value="opcion3" />
+      <Picker.Item label="Seleccione" value="Seleccione" />
+      <Picker.Item label="JEEP" value="JEEP" />
+      <Picker.Item label="FORD" value="FORD" />
   </Picker>
   </View>
   <View >
       <Text style={styles.descrip}>Seleccionar Modelo</Text>
     <Picker style={styles.catalogueContainer}
-      selectedValue={selectedValue}
-      onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
-      <Picker.Item label="Mazda" value="Mazda" />
-      <Picker.Item label="Opción 2" value="opcion2" />
-      <Picker.Item label="Opción 3" value="opcion3" />
+      selectedValueM={selectedValueM}
+      onValueChange={(itemValue, itemIndex) => setSelectedValueM(itemValue)}>
+      <Picker.Item label="Seleccione" value="Seleccione" />
+      <Picker.Item label="WRANGLER" value="opcion2" />
+      <Picker.Item label="RENEGADE" value="opcion3" />
   </Picker>
   </View>
     <VehicleList vehicles={vehicles} />

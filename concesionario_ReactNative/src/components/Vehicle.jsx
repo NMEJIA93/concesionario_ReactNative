@@ -1,7 +1,9 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
+import { Button } from 'react-native-paper';
 
-const Vehicle = ({ urlImagen, description, price }) => {
+
+const Vehicle = ({ urlImagen, description, price,name, onCotizar }) => {
   return (
     <View style={styles.container}>
            
@@ -9,8 +11,11 @@ const Vehicle = ({ urlImagen, description, price }) => {
                 source={{ uri: urlImagen }}
                 style={styles.img}
             />
+            <Text style={styles.descrip}>{name}</Text>
             <Text style={styles.descrip}>{description}</Text>
-            <Text style={styles.princ}>${price}</Text>
+            <Text style={styles.princ}>{price}</Text>
+            <Button style={styles.buttons} mode="contained" onPress={() => console.log('Pressed')}>Cotizar</Button>
+            
         </View>
   )
 }
@@ -20,13 +25,19 @@ const styles = StyleSheet.create({
       justifyContent:'center',
       alignItems:'center',
       padding: 20,
-      backgroundColor: '#f2f2f2',
+      backgroundColor: '#fff',
       borderWidth: 1,
       borderColor: '#ccc',
       borderRadius: 5,
       marginBottom: 10,
-        
-  
+    },
+    buttons:{
+        marginVertical: 10,
+        backgroundColor: '#ffba00',
+        marginHorizontal: 20,
+        padding: 10,
+        borderWidth: 1,
+        borderColor: '#FFF'
     },
     title: {
       fontSize: 25,
@@ -35,20 +46,20 @@ const styles = StyleSheet.create({
       marginBottom:5
     },
     img: {
-      width: 150,
+      width: 300,
       height: 200
     },
    
       descrip:{
-      fontSize: 18,
-      color: '#666666',
+      fontSize: 14,
+      color: '#000000',
       marginBottom: 5, 
       fontFamily: 'sans-regular',
       },
       princ:{
-          fontSize:18,
+          fontSize:22,
           fontWeight:'bold',
-          color:'#c91717',
+          color:'#000000',
           marginStart:10
       }
   
