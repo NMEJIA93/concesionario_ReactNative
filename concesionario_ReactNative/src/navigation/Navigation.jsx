@@ -43,7 +43,7 @@ const Navigation = () => {
          <Tab.Screen   name='catalogue' component={Catalogue} options={{title:'Catalogo'}}/>
          <Tab.Screen   name='technicalServiceScreen' component={TechnicalServiceScreen} options={{title:'Servicio Tecnico'}}/>
          <Tab.Screen   name='quoteScreen' component={QuoteScreen} options={{title:'Cotización'}}/>
-         <Tab.Screen   name='technicalServiceFormScreen' component={TechnicalServiceFormScreen} options={{title:'Cotidddzación'}}/>
+{/*          <Tab.Screen   name='technicalServiceFormScreen' component={TechnicalServiceFormScreen} options={{title:'Cotidddzación'}}/> */}
         </Tab.Navigator>
     </NavigationContainer>
   )
