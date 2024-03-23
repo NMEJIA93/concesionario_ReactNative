@@ -25,13 +25,13 @@ const styles = StyleSheet.create({
     },
     containerDatos: {
         flexDirection: 'row',
-        
+
     },
     label: {
         textAlign: 'left',
         fontSize: 19,
         color: '#000000',
-        fontWeight:'bold'
+        fontWeight: 'bold'
 
     },
     input: {
@@ -110,11 +110,57 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    value:{
+    value: {
         color: '#a58d81',
         fontSize: 19,
         fontWeight: '700',
         marginBottom: 10
+    }, ImageContac: {
+        width: 300,
+        height: 300,
+        marginBottom: 1,
+    }, promotionContainer: {
+        alignItems: 'center',
+        marginBottom: 20,
+    }, TextTitleContac: {
+        fontSize: 30,
+        textAlign: 'center',
+        fontWeight: 'bold',
+        marginBottom: 5,
+    }, TextDescriptionContac: {
+        fontSize: 16,
+        textAlign: 'center',
+        fontWeight: 'bold',
+        marginBottom: 10,
+        marginLeft: 30,
+        marginRight: 30
+
+    },
+    TextDescripContacAndHeader: {
+        fontSize: 30,
+        textAlign: 'center',
+        color: '#D5D5D5',
+        padding: 5,
+        fontFamily: 'sans-regular',
+        ontSize: 10,
+        textAlign: 'center',
+        fontWeight: 'bold',
+        marginBottom: 5,
+        marginHorizontal: 10,
+        marginVertical: 10
+    },
+    buttonReserve: {
+        backgroundColor: '#007bff',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 5,
+    }, ImageTestCar: {
+        flex: 1,
+        aspectRatio: 1.5,
+        width: 200, 
+        height: 200,
+        resizeMode: 'contain',
+        marginBottom: 10,
     }
 })
 
