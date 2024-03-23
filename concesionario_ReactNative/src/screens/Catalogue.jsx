@@ -35,8 +35,9 @@ const Catalogue = () => {
 
     }];
   return (
-    <ScrollView>
-      <View >
+
+    <View >
+      <ScrollView>
         <Text style={styles.banner}>Catálogo de Vehículos</Text>
         <View >
           <Text style={styles.descrip}>Seleccionar Marca</Text>
@@ -61,9 +62,9 @@ const Catalogue = () => {
 
         </View>
         <VehicleList vehicles={vehicles} />
+      </ScrollView>
+    </View>
 
-      </View>
-    </ScrollView>
 
   );
 

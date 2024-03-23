@@ -2,7 +2,7 @@ import React from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import styles from '../styles/globalStyles'
 
-const Service = ({ id , tipo, fecha }) => {
+const Service = ({ id, tipo, fecha }) => {
 
     return (
         <View style={styles.container}>

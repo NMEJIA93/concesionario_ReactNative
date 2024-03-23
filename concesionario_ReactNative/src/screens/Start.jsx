@@ -11,26 +11,26 @@ const Start = () => {
   return (
     <View >
       <View>
-      <Text style={styles.banner}>Concesionario NBC</Text>
-    </View>
-    <View style={styles.promotionContainer}>
-      <Image
-        source={{uri: 'https://www.ford.com.co/content/dam/Ford/website-assets/latam/co/nameplate/ranger-raptor/2023/colorizer/gris-piedra/fco-ranger-raptor-colorizer-gris-piedra.jpg.dam.full.high.jpg/1685109984586.jpg'}}
-        style={styles.carImage}
-        resizeMode="cover"
-      />
-      <Text style={styles.promotionText}>¡Promoción especial!</Text>
-      <Text style={styles.promotionDescription}>Compra este carro y obtén un descuento exclusivo.</Text>
-      <Button style={styles.buttons}
-        mode="contained" onPress={() => navigation.navigate('Contact')}>Mas detalles</Button>
-    </View>
-    <View style={styles.contactContainer}>
+        <Text style={styles.banner}>Concesionario NBC</Text>
+      </View>
+      <View style={styles.promotionContainer}>
+        <Image
+          source={{ uri: 'https://www.ford.com.co/content/dam/Ford/website-assets/latam/co/nameplate/ranger-raptor/2023/colorizer/gris-piedra/fco-ranger-raptor-colorizer-gris-piedra.jpg.dam.full.high.jpg/1685109984586.jpg' }}
+          style={styles.carImage}
+          resizeMode="cover"
+        />
+        <Text style={styles.promotionText}>¡Promoción especial!</Text>
+        <Text style={styles.promotionDescription}>Compra este carro y obtén un descuento exclusivo.</Text>
+        <Button style={styles.buttons}
+          mode="contained" onPress={() => navigation.navigate('Contact')}>Mas detalles</Button>
+      </View>
+      <View style={styles.contactContainer}>
         <Text style={styles.contactInfo}>Teléfono: 123-456-789</Text>
         <Text style={styles.contactInfo}>Correo electrónico: contacto@tucarro.com</Text>
         <Text style={styles.contactInfo}>Dirección: Calle Principal #123</Text>
       </View>
 
-  </View>
+    </View>
   )
 }
 const styles = StyleSheet.create({
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 20,
-    backgroundColor:'#ffffff'
+    backgroundColor: '#ffffff'
   },
   banner: {
     fontSize: 30,
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   promotionContainer: {
     alignItems: 'center',
     marginBottom: 20,
-    backgroundColor:'#ffffff'
+    backgroundColor: '#ffffff'
   },
   carImage: {
     width: 300,
@@ -63,21 +63,21 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 5,
-    color:'#000000'
+    color: '#000000'
   },
-  buttons:{
+  buttons: {
     marginVertical: 10,
     backgroundColor: '#ffba00',
     marginHorizontal: 20,
     padding: 10,
     borderWidth: 1,
     borderColor: '#FFF'
-},
+  },
   promotionDescription: {
     fontSize: 16,
     textAlign: 'center',
     marginBottom: 10,
-    color:'#000000'
+    color: '#000000'
   },
   button: {
     backgroundColor: '#007bff',
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
   contactInfo: {
     fontSize: 16,
     marginBottom: 5,
-    color:'#000000'
+    color: '#000000'
   },
   header: {
     backgroundColor: '#ffffff',

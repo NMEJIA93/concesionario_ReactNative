@@ -5,7 +5,7 @@ import { Button } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 
 const TestCar = () => {
-  const navigation = useNavigation();
+    const navigation = useNavigation();
     return (
         <SafeAreaView>
             <ScrollView>
@@ -30,7 +30,7 @@ const TestCar = () => {
                             Precio sujerido: $120.000.000
                         </Text>
                         <Button style={styles.buttons}
-                          mode="contained" onPress={() => navigation.navigate('formTest')}>Pruebalo</Button>
+                            mode="contained" onPress={() => navigation.navigate('formTest')}>Pruebalo</Button>
 
                         <Image source={require('../img/carro2.png')}
                             style={styles.ImageTestCar}
