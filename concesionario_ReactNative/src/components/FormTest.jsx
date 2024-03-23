@@ -1,10 +1,10 @@
 import React from 'react'
 import { View, SafeAreaView, ScrollView, Pressable } from 'react-native'
 import { Text, TextInput, Button, RadioButton, List, Modal } from 'react-native-paper';
+import DatePicker from 'react-native-date-picker'
 import styles from '../styles/globalStyles'
 
-
-const QuoteScreen = () => {
+const FormTest = () => {
     const [value, setValue] = React.useState('first');
     const [expanded, setExpanded] = React.useState(true);
 
@@ -15,7 +15,7 @@ const QuoteScreen = () => {
         <SafeAreaView style={styles.containerMain}>
             <ScrollView>
                 <View style={styles.header}>
-                    <Text style={styles.headerText} variant="displayMedium">Cotizacion Vehiculo</Text>
+                    <Text style={styles.headerText} variant="displayMedium">Reserva Test Drive</Text>
                 </View>
 
                 <View style={styles.container}>
@@ -61,26 +61,12 @@ const QuoteScreen = () => {
                         label="Telefono Contacto"
                         keyboardType='numeric'
                     />
-                    <TextInput
-                        style={styles.input}
-                        placeholder='Email'
-                        placeholderTextColor={'#b9b5b5'}
-                        label="email@correo.com"
-                        keyboardType='email-address'
-                    />
 
                     <TextInput
                         style={styles.input}
-                        placeholder='Marca'
+                        placeholder='Date'
                         placeholderTextColor={'#b9b5b5'}
-                        label="Marca"
-                    />
-
-                    <TextInput
-                        style={styles.input}
-                        placeholder='Modelo'
-                        placeholderTextColor={'#b9b5b5'}
-                        label="Modelo"
+                        label="Fecha"
                     />
 
                     <View>
@@ -107,9 +93,9 @@ const QuoteScreen = () => {
 
 
             </ScrollView>
-        </SafeAreaView>
+        </SafeAreaView >
 
     )
 }
 
-export default QuoteScreen
+export default FormTest

@@ -1,63 +1,54 @@
 import React from 'react'
-import { StyleSheet, View, Text, ScrollView } from 'react-native'
+import { StyleSheet, View, Text, ScrollView, Image } from 'react-native'
+import styles from '../styles/globalStyles'
 
 const Contact = () => {
     return (
-        <View style={styles.container}>
-            <View style={styles.subContainer}>
-                <Text style={styles.textTitle}>
-                    Contactanos
-                </Text>
-                <Text style={styles.textContent}>
-                {'\n'}Estamos aqui para ayudarte{'\n'}{'\n'}{'\n'}
-                    Asesor:
+        <View style={{ flex: 1 }}>
+            <View style={styles.header}>
+                <Text
+                    style={styles.headerText}
+                    variant="displayMedium">
+                    Contacto
                 </Text>
             </View>
-            <View style={styles.container}>
-                <View style={styles.subContainer}>
-                    <Text style={styles.textContent}> 
-                        Andres Sanchez{'\n'}
-                        Cel: 350400420X{'\n'}{'\n'}
-                        E-mail:{'\n'}AndresT.entierro@Chevi.co{'\n'}{'\n'}
-                        www.chevrolet.com{'\n'}
-                    </Text>
-                </View>
+            <View style={styles.promotionContainer}>
+                <Image source={require('../img/Logo_Renaul.jpg')}
+                    style={styles.ImageContac}
+                    resizeMode="cover"
+                />
+            </View>
+            <View style={styles.bodyTecnicalServiceScreen}>
+                <Text style={styles.TextTitleContac}>
+                    ¿Quieres comunicarte con nosotros?
+                </Text>
+                <Text style={styles.TextDescriptionContac}>
+                    !TE LLAMARA NUESTRO EXPERTO¡
+                </Text>
+                <Text style={styles.TextDescriptionContac}>
+                    En el horario:
+                </Text>
+                <Text style={styles.TextDescriptionContac}>
+                    Lunes a viernes de 7:00Hr. a 19:00Hr.
+                </Text>
+                <Text style={styles.TextDescriptionContac}>
+                    Sábado de 8:00Hr. a 12:00Hr.
+                </Text>
+            </View>
+            <View style={styles.TextDescripContacAndHeader}>
+                <Text style={styles.TextTitleContac}
+                variant="displayMedium">
+                    Más información
+                </Text>
+            </View>
+            <View>
+                <Text style={styles.TextDescriptionContac}>
+                    Para preguntas sobre el Plan Andres, puedes escribir al correo electrónico: Andres.cafe@renault.com y para preguntas o solicitudes sobre programacion o en la línea nacional gratuita: 350400420X
+                </Text>
             </View>
         </View >
 
+
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#ffba00',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-
-    },
-    subContainer: {
-        width: 350,
-        height: 250,
-        backgroundColor: '#dadada',
-        alignContent: 'center',
-    },
-    textTitle: {
-        fontSize: 40,
-        color: '#210dd1',
-        textAlign: 'center',
-        marginHorizontal: 15,
-        marginVertical: 15
-    },
-    textContent: {
-        fontSize: 25,
-        color: '#210dd1',
-        textAlign: 'center',
-        marginHorizontal: 15,
-        marginVertical: 15,
-        fontWeight: 'bold',
-    },
-
-})
-
 export default Contact
