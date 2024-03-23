@@ -9,6 +9,7 @@ import TechnicalServiceScreen from '../screens/TechnicalServiceScreen'
 import QuoteScreen from '../screens/QuoteScreen'
 import TestCar from '../components/TestCar';
 import Contact from '../components/Contact';
+import FormTest from '../components/FormTest';
 
 
 const Tab= createBottomTabNavigator()
@@ -46,6 +47,7 @@ const Navigation = () => {
         <Tab.Screen   name='quoteScreen' component={QuoteScreen} options={{title:'Cotización'}}/>
         <Tab.Screen   name='testCar' component={TestCar} options={{title:'Prueba Manejo'}}/>
         <Tab.Screen   name='Contact' component={Contact} options={{title:'Contactenos'}}/>
+        <Tab.Screen   name='formTest' component={FormTest} options={{title:'Test'}}/>
         </Tab.Navigator>
     </NavigationContainer>
   )

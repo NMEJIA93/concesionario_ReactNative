@@ -157,11 +157,19 @@ const styles = StyleSheet.create({
     }, ImageTestCar: {
         flex: 1,
         aspectRatio: 1.5,
-        width: 200, 
+        width: 200,
         height: 200,
         resizeMode: 'contain',
         marginBottom: 10,
-    }
+    },
+    buttons:{
+      marginVertical: 10,
+      backgroundColor: '#ffba00',
+      marginHorizontal: 20,
+      padding: 10,
+      borderWidth: 1,
+      borderColor: '#FFF'
+  }
 })
 
 export default styles;

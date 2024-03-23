@@ -1,8 +1,11 @@
 import React from 'react'
 import { StyleSheet, View, Text, ScrollView, Image, TouchableOpacity, SafeAreaView } from 'react-native'
 import styles from '../styles/globalStyles'
+import { Button } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
 
 const TestCar = () => {
+  const navigation = useNavigation();
     return (
         <SafeAreaView>
             <ScrollView>
@@ -26,9 +29,9 @@ const TestCar = () => {
                         <Text style={styles.TextDescriptionContac}>
                             Precio sujerido: $120.000.000
                         </Text>
-                        <TouchableOpacity style={styles.buttonReserve}>
-                            <Text style={styles.buttonText}>Preubalo</Text>
-                        </TouchableOpacity>
+                        <Button style={styles.buttons}
+                          mode="contained" onPress={() => navigation.navigate('formTest')}>Pruebalo</Button>
+
                         <Image source={require('../img/carro2.png')}
                             style={styles.ImageTestCar}
                             resizeMode="cover"
