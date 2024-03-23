@@ -1,13 +1,14 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { StyleSheet} from 'react-native'
-import { IconButton, Colors } from 'react-native-paper';
+import { IconButton,  } from 'react-native-paper';
 
 import Start from '../screens/Start'
 import Catalogue from '../screens/Catalogue'
 import TechnicalServiceScreen from '../screens/TechnicalServiceScreen'
 import QuoteScreen from '../screens/QuoteScreen'
-import TechnicalServiceFormScreen from '../screens/TechnicalServiceFormScreen'
+import TestCar from '../components/TestCar';
+import Contact from '../components/Contact';
 
 
 const Tab= createBottomTabNavigator()
@@ -40,10 +41,11 @@ const Navigation = () => {
     <NavigationContainer>
         <Tab.Navigator screenOptions={screenOptions} >
         <Tab.Screen  name='start' component={Start} />
-         <Tab.Screen   name='catalogue' component={Catalogue} options={{title:'Catalogo'}}/>
-         <Tab.Screen   name='technicalServiceScreen' component={TechnicalServiceScreen} options={{title:'Servicio Tecnico'}}/>
-         <Tab.Screen   name='quoteScreen' component={QuoteScreen} options={{title:'Cotización'}}/>
-{/*          <Tab.Screen   name='technicalServiceFormScreen' component={TechnicalServiceFormScreen} options={{title:'Cotidddzación'}}/> */}
+        <Tab.Screen   name='catalogue' component={Catalogue} options={{title:'Catalogo'}}/>
+        <Tab.Screen   name='technicalServiceScreen' component={TechnicalServiceScreen} options={{title:'Servicio Tecnico'}}/>
+        <Tab.Screen   name='quoteScreen' component={QuoteScreen} options={{title:'Cotización'}}/>
+        <Tab.Screen   name='testCar' component={TestCar} options={{title:'Prueba Manejo'}}/>
+        <Tab.Screen   name='Contact' component={Contact} options={{title:'Contactenos'}}/>
         </Tab.Navigator>
     </NavigationContainer>
   )

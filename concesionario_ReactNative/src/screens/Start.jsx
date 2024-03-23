@@ -22,7 +22,7 @@ const Start = () => {
       <Text style={styles.promotionText}>¡Promoción especial!</Text>
       <Text style={styles.promotionDescription}>Compra este carro y obtén un descuento exclusivo.</Text>
       <Button style={styles.buttons}
-        mode="contained" onPress={() => navigation.navigate('quoteScreen')}>Mas detalles</Button>
+        mode="contained" onPress={() => navigation.navigate('Contact')}>Mas detalles</Button>
     </View>
     <View style={styles.contactContainer}>
         <Text style={styles.contactInfo}>Teléfono: 123-456-789</Text>
