@@ -3,6 +3,8 @@ import { Text, View, StyleSheet, ScrollView } from 'react-native'
 import { Picker } from '@react-native-picker/picker';
 import VehicleList from '../components/VehicleList'
 import { Button } from 'react-native-paper';
+//import FirebaseState from '../context/firebase/firebaseState';
+import CatalogueState from '../context/catalogue/catalogueState';
 
 const Catalogue = () => {
   const [selectedValue, setSelectedValue] = useState('');
@@ -35,36 +37,38 @@ const Catalogue = () => {
 
     }];
   return (
-
-    <View >
-      <ScrollView>
-        <Text style={styles.banner}>Catálogo de Vehículos</Text>
+  
+      <CatalogueState>
         <View >
-          <Text style={styles.descrip}>Seleccionar Marca</Text>
-          <Picker
-            style={styles.catalogueContainer}
-            selectedValue={selectedValue}
-            onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
-            <Picker.Item label="Seleccione" value="Seleccione" />
-            <Picker.Item label="JEEP" value="JEEP" />
-            <Picker.Item label="FORD" value="FORD" />
-          </Picker>
-        </View>
-        <View >
-          <Text style={styles.descrip}>Seleccionar Modelo</Text>
-          <Picker style={styles.catalogueContainer}
-            selectedValueM={selectedValueM}
-            onValueChange={(itemValue, itemIndex) => setSelectedValueM(itemValue)}>
-            <Picker.Item label="Seleccione" value="Seleccione" />
-            <Picker.Item label="WRANGLER" value="opcion2" />
-            <Picker.Item label="RENEGADE" value="opcion3" />
-          </Picker>
+          <ScrollView>
+            <Text style={styles.banner}>Catálogo de Vehículos</Text>
+            <View >
+              <Text style={styles.descrip}>Seleccionar Marca</Text>
+              <Picker
+                style={styles.catalogueContainer}
+                selectedValue={selectedValue}
+                onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
+                <Picker.Item label="Seleccione" value="Seleccione" />
+                <Picker.Item label="JEEP" value="JEEP" />
+                <Picker.Item label="FORD" value="FORD" />
+              </Picker>
+            </View>
+            <View >
+              <Text style={styles.descrip}>Seleccionar Modelo</Text>
+              <Picker style={styles.catalogueContainer}
+                selectedValueM={selectedValueM}
+                onValueChange={(itemValue, itemIndex) => setSelectedValueM(itemValue)}>
+                <Picker.Item label="Seleccione" value="Seleccione" />
+                <Picker.Item label="WRANGLER" value="opcion2" />
+                <Picker.Item label="RENEGADE" value="opcion3" />
+              </Picker>
 
+            </View>
+            <VehicleList vehicles={vehicles} />
+          </ScrollView>
         </View>
-        <VehicleList vehicles={vehicles} />
-      </ScrollView>
-    </View>
-
+      </CatalogueState>
+ 
 
   );
 
