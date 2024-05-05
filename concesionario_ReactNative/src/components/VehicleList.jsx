@@ -16,10 +16,11 @@ const VehicleList = (/* { vehicles } */) => {
   }, [])
   const handleCotizar = () => {
     // Lógica para manejar la acción de cotizar
-    console.log('Botón Cotizar presionado');
+    console.log('Botón Cotizar presionado..');
   };
   return (
     <ScrollView>
+      
       {catalogue.map((vehicle) => {
         const { name,urlImagen,description, price} = vehicle
         console.log('entro ')
