@@ -35,6 +35,7 @@ const VehicleList = (/* { vehicles } */) => {
           />
         )
       })}
+      
       {/*         {vehicles.map((vehicle) => (
           <Vehicle
           key={vehicle.id}
