@@ -21,6 +21,7 @@ const VehicleList = (/* { vehicles } */) => {
   return (
     <ScrollView>
       
+      
       {catalogue.map((vehicle) => {
         const { name,urlImagen,description, price} = vehicle
         console.log('entro ')
