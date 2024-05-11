@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 import { Button } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
+import quoteContext from '../context/quote/quoteContext';
 
-const Vehicle = ({ urlImagen, description, price, name, onCotizar }) => {
+const Vehicle = ({ urlImagen, description, price, name, Car }) => {
+  const { SelectVehicle } = useContext(quoteContext)
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -16,7 +18,13 @@ const Vehicle = ({ urlImagen, description, price, name, onCotizar }) => {
       <Text style={styles.descrip}>{description}</Text>
       <Text style={styles.princ}>{price}</Text>
       <Button style={styles.buttons}
-        mode="contained" onPress={() => navigation.navigate('quoteScreen')}>Cotizar</Button>
+        mode="contained" onPress={() => {
+          SelectVehicle(Car)
+          navigation.navigate('quoteScreen')
+
+        }}
+      >Cotizar
+      </Button>
 
     </View>
   )
