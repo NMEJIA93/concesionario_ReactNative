@@ -1,25 +1,25 @@
 import React, { useReducer } from "react";
 import firebase from '../../FirebaseDB';
-import TestDriveContext from './testDriveContext';
-import TestDriveReducer from './testDriveReducer';
+import testDriveContext from './testDriveContext';
+import testDriveReducer from './testDriveReducer';
 
 
-const TestDriveState = props => {
+const testDriveState = props => {
     const initialState = {
         testDrive: []
     }
-    const [state, dispatch] = useReducer(TestDriveReducer, initialState)
+    const [state, dispatch] = useReducer(testDriveReducer, initialState)
     return (
-        <TestDriveContext.Provider
+        <testDriveContext.Provider
             value={{
                 testDrive: state.testDrive,
                 firebase
             }}
         >
             {props.children}
-        </TestDriveContext.Provider>
+        </testDriveContext.Provider>
     )
 
 }
 
-export default TestDriveState;
+export default testDriveState;

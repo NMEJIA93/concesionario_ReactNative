@@ -4,20 +4,20 @@ import Vehicle from './Vehicle';
 import CatalogueContext from '../context/catalogue/catalogueContext'; 
 import { Text } from 'react-native-paper';
 
+import quoteContext from '../context/quote/quoteContext';
 
-const VehicleList = (/* { vehicles } */) => {
+
+const VehicleList = () => {
 
   const { catalogue, getListCars } = useContext(CatalogueContext)
+  const {SelectVehicle}=useContext(quoteContext)
+
+
 
   useEffect(() => {
-    return () => {
       getListCars()
-    };
   }, [])
-  const handleCotizar = () => {
-    // Lógica para manejar la acción de cotizar
-    console.log('Botón Cotizar presionado..');
-  };
+  
   return (
     <ScrollView>
       
@@ -31,21 +31,11 @@ const VehicleList = (/* { vehicles } */) => {
             name={name}
             description={description}
             price={price}
-            onCotizar={handleCotizar} // Pasar la función de manejo como prop
+            Car={vehicle} // Pasar la función de manejo como prop
           />
         )
       })}
-      
-      {/*         {vehicles.map((vehicle) => (
-          <Vehicle
-          key={vehicle.id}
-          urlImagen={vehicle.urlImagen}
-          name={vehicle.name}
-          description={vehicle.description}
-          price={vehicle.price}
-          onCotizar={handleCotizar} // Pasar la función de manejo como prop
-          />
-        ))} */}
+   
     </ScrollView>
   );
 }
